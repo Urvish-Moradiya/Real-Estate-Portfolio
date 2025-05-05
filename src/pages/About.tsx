@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CTA from "@/components/home/CTA";
 import { useInView } from "@/hooks/use-in-view";
 import { ArrowRight, Building2, Check, Users, Layers, Phone, Mail } from "lucide-react";
 
@@ -38,7 +37,6 @@ const About = () => {
         {/* Quick Contact */}
         <QuickContact />
         
-        <CTA />
       </main>
       <Footer />
     </>
@@ -61,12 +59,12 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-estate hover:bg-estate-light hover:text-white btn-hover-slide">
+              <Button size="lg" className="hover:bg-estate-300 text-white btn-hover-slide">
                 Contact Us
               </Button>
             </Link>
             <Link to="/projects">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/30">
                 View Our Projects
               </Button>
             </Link>

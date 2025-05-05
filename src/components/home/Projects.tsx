@@ -46,8 +46,8 @@ const Projects = () => {
                 className={cn(
                   "rounded-full px-5",
                   activeFilter === category.id 
-                    ? "bg-estate text-white" 
-                    : "text-estate-charcoal hover:bg-estate hover:text-white"
+                    ? "hover:bg-estate-300 text-white btn-hover-slide" 
+                    : "text-estate hover:bg-estate hover:text-white"
                 )}
                 onClick={() => setActiveFilter(category.id)}
               >
@@ -75,7 +75,7 @@ const Projects = () => {
         
         <div className="text-center mt-12">
           <Link to="/projects">
-            <Button className="bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+            <Button className="hover:bg-estate-300 text-white btn-hover-slide">
               View All Projects
             </Button>
           </Link>

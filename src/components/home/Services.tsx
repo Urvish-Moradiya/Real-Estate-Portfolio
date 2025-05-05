@@ -89,7 +89,7 @@ const Services = () => {
                   </ul>
                   
                   <Link to="/services">
-                    <Button className="bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+                    <Button className=" hover:bg-estate-300 text-white btn-hover-slide">
                       Learn More
                     </Button>
                   </Link>

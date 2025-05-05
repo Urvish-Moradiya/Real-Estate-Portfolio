@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -75,7 +74,9 @@ const Navbar = () => {
   
   const navbarClass = cn(
     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
-    isScrolled ? "bg-white/90 shadow-md backdrop-blur-md py-3" : "bg-transparent py-5"
+    isScrolled 
+      ? "bg-white/95 shadow-lg backdrop-blur-md py-3 text-gray-900" 
+      : "bg-transparent py-5 text-white"
   );
 
   const onSubmit = (data: BookingFormValues) => {
@@ -91,8 +92,8 @@ const Navbar = () => {
     <nav className={navbarClass}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <h1 className="text-2xl font-playfair font-bold">
-            <span className="text-estate">Serene</span>Estate
+          <h1 className="text-2xl font-playfair font-bold transition-colors duration-300">
+            <span className={isScrolled ? "text-estate" : "text-white"}>Real</span>Estate
           </h1>
         </Link>
 
@@ -101,18 +102,17 @@ const Navbar = () => {
             <button 
               onClick={toggleMenu} 
               aria-label="Toggle menu"
-              className="text-foreground focus:outline-none"
+              className="focus:outline-none transition-colors duration-300"
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className={cn("h-6 w-6", isScrolled ? "text-gray-900" : "text-white")} />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className={cn("h-6 w-6", isScrolled ? "text-gray-900" : "text-white")} />
               )}
             </button>
 
-            {/* Mobile Menu */}
             {isMenuOpen && (
-              <div className="fixed inset-0 top-[72px] bg-white z-50 overflow-y-auto">
+              <div className="fixed inset-0 top-[72px] bg-white z-50 overflow-y-auto text-gray-900">
                 <div className="flex flex-col space-y-6 p-8">
                   {navLinks.map((link, index) => (
                     <Link
@@ -120,7 +120,7 @@ const Navbar = () => {
                       to={link.path}
                       className={cn(
                         "text-lg font-medium animate-fade-in",
-                        location.pathname === link.path ? "text-estate" : "text-foreground",
+                        location.pathname === link.path ? "text-estate" : "text-gray-900",
                         `animate-delay-${index * 100}`
                       )}
                       style={{ 
@@ -135,7 +135,7 @@ const Navbar = () => {
                   ))}
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button className="w-full mt-4 bg-estate hover:bg-estate-dark text-white animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                      <Button className="w-full mt-4 hover:bg-estate-300 text-white btn-hover-slide" style={{ animationDelay: '0.5s' }}>
                         Book a Visit
                       </Button>
                     </DialogTrigger>
@@ -152,7 +152,7 @@ const Navbar = () => {
                               <FormItem>
                                 <FormLabel>Full Name</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="John Doe" {...field} />
+                                  <Input placeholder="Fullname" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -165,7 +165,7 @@ const Navbar = () => {
                               <FormItem>
                                 <FormLabel>Email</FormLabel>
                                 <FormControl>
-                                  <Input type="email" placeholder="john@example.com" {...field} />
+                                  <Input type="email" placeholder="user@example.com" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -178,7 +178,7 @@ const Navbar = () => {
                               <FormItem>
                                 <FormLabel>Phone Number</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="(123) 456-7890" {...field} />
+                                  <Input placeholder="(+91)88888 88888" {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -210,7 +210,7 @@ const Navbar = () => {
                               </FormItem>
                             )}
                           />
-                          <Button type="submit" className="w-full bg-estate hover:bg-estate-dark">
+                          <Button type="submit" className="w-full bg-estate hover:bg-estate-dark transition-colors duration-300">
                             Schedule Visit <Calendar className="ml-2 h-4 w-4" />
                           </Button>
                         </form>
@@ -229,8 +229,14 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={cn(
-                    "link text-sm font-medium transition-colors",
-                    location.pathname === link.path ? "text-estate after:w-full" : "text-foreground"
+                    "text-sm font-medium relative transition-colors duration-300",
+                    location.pathname === link.path 
+                      ? "text-estate after:w-full" 
+                      : isScrolled 
+                        ? "text-gray-900 hover:text-estate" 
+                        : "text-white hover:text-estate",
+                    "after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:bg-estate after:transition-all after:duration-300",
+                    location.pathname !== link.path && "after:w-0 hover:after:w-full"
                   )}
                 >
                   {link.name}
@@ -239,7 +245,10 @@ const Navbar = () => {
             </div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="hidden md:flex bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+                <Button className={cn(
+                  "hidden md:flex text-white transition-colors duration-300",
+                  isScrolled ? "hover:bg-estate-300 btn-hover-slide" : "hover:bg-estate-300 btn-hover-slide"
+                )}>
                   Book a Visit
                 </Button>
               </DialogTrigger>
@@ -314,7 +323,7 @@ const Navbar = () => {
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full bg-estate hover:bg-estate-dark">
+                    <Button type="submit" className="w-full hover:bg-estate-300 text-white btn-hover-slide">
                       Schedule Visit <Calendar className="ml-2 h-4 w-4" />
                     </Button>
                   </form>

@@ -149,7 +149,7 @@ export const FloorPlansSection = () => {
                     <div className="mt-6 pt-6 border-t border-gray-100">
                       <Popover>
                         <PopoverTrigger asChild>
-                          <Button className="w-full bg-estate text-white" size="lg">
+                          <Button className="w-full hover:bg-estate-300 text-white btn-hover-slide" size="lg">
                             <Download size={16} className="mr-2" />
                             Download Floor Plan
                           </Button>

@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h2 className="font-playfair text-xl font-semibold mb-4">
-              <span className="text-estate">Serene</span>Estate
+              <span className="text-estate">Real</span>Estate
             </h2>
             <p className="text-sm text-gray-300 mt-4 max-w-xs">
               Designing dreams and building reality with premium craftsmanship and attention to detail since 2005.

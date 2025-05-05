@@ -12,7 +12,7 @@ const LuxuryShowcase = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[90vh] flex items-center justify-center"
+      className="relative min-h-[70vh] flex items-center justify-center"
       style={{
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')",
         backgroundSize: "cover",
@@ -38,7 +38,7 @@ const LuxuryShowcase = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
             <Link to="/projects">
-              <Button size="lg" className="bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+              <Button size="lg" className="hover:bg-estate-dark text-white btn-hover-slide">
                 View Projects
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -47,7 +47,7 @@ const LuxuryShowcase = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white/20"
+                 className="bg-transparent border-white text-white hover:bg-white/30"
               >
                 Schedule a Visit
               </Button>

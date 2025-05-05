@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
@@ -79,20 +78,21 @@ const Hero = () => {
           }}
         >
           <Link to="/projects">
-            <Button size="lg" className="bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+            <Button size="lg" className="hover:bg-estate-300 text-white btn-hover-slide">
               Explore Projects
             </Button>
           </Link>
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-white text-white hover:bg-white/20"
+            className="bg-transparent border-white text-white hover:bg-white/30"
             onClick={() => window.location.href = "#contact"}
           >
             Contact Us
           </Button>
         </div>
       </div>
+      
       
       <button
         onClick={scrollToNext}

@@ -4,7 +4,6 @@ import { useInView } from "@/hooks/use-in-view";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CTA from "@/components/home/CTA";
 import ProjectCard from "@/components/projects/ProjectCard";
 import projects from "@/data/projects";
 
@@ -94,7 +93,6 @@ const Projects = () => {
           </div>
         </div>
         
-        <CTA />
       </main>
       <Footer />
     </>

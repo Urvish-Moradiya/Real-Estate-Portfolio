@@ -56,7 +56,7 @@ const About = () => {
             className={`transform transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
             style={{ transitionDelay: '0.2s' }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Legacy of <span className="text-gradient">Excellence</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Legacy of <span className="text-estate">Excellence</span></h2>
             
             <p className="text-lg mb-6 text-estate-charcoal/80">
               For over two decades, SereneEstate has been crafting exceptional living spaces that balance aesthetic beauty with practical functionality. Our commitment to quality and attention to detail has established us as leaders in luxury real estate development.
@@ -67,7 +67,7 @@ const About = () => {
             </p>
             
             <Link to="/about">
-              <Button className="bg-estate hover:bg-estate-dark text-white btn-hover-slide">
+              <Button className="hover:bg-estate-300 text-white btn-hover-slide">
                 Discover Our Story
               </Button>
             </Link>

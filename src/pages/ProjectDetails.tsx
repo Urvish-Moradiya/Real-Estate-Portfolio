@@ -25,7 +25,6 @@ import {
 import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CTA from "@/components/home/CTA";
 import projects from "@/data/projects";
 import AmenitiesSection from "@/components/projects/AmenitiesSection";
 import FloorPlansSection from "@/components/projects/FloorPlansSection";
@@ -224,7 +223,7 @@ const ProjectDetails = () => {
                     </div>
                     
                     <div className="mt-8 space-y-4">
-                      <Button className="w-full bg-estate text-white" size="lg">
+                      <Button className="w-full hover:bg-estate-300 text-white btn-hover-slide" size="lg">
                         <Download size={16} className="mr-2" />
                         Project Brochure (PDF)
                       </Button>
@@ -324,7 +323,7 @@ const ProjectDetails = () => {
               Schedule a site visit or speak with one of our representatives to learn more about this property.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-estate text-white">
+              <Button size="lg" className="hover:bg-estate-dark text-white btn-hover-slide">
                 Book a Site Visit
               </Button>
               <Button size="lg" variant="outline" className="border-estate text-estate hover:bg-estate hover:text-white">
@@ -334,7 +333,6 @@ const ProjectDetails = () => {
           </div>
         </section>
         
-        <CTA />
       </main>
       <Footer />
     </>
