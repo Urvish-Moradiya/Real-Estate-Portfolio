@@ -1,5 +1,10 @@
 
 import { Project } from "@/components/projects/ProjectCard";
+import horizonplaza from "./../assets/Horizon Plaza.jpg";
+import EmeraldValleyVillas from "./../assets/Emerald Valley Villas.webp";
+import NexusBusinessCenter from "./../assets/Nexus Business Center.jpeg";
+import AzureHeightsTower from "./../assets/tower.jfif";
+
 
 // Project data
 const projects: Project[] = [
@@ -22,7 +27,7 @@ const projects: Project[] = [
     location: "Miami, FL",
     status: "completed",
     completionDate: "September 2022",
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: AzureHeightsTower,
     description: "Azure Heights Tower is a landmark commercial project in Miami's business district, offering premium office spaces with panoramic ocean views. The building incorporates sustainable design principles and cutting-edge smart technology throughout its 32 floors."
   },
   {
@@ -33,7 +38,7 @@ const projects: Project[] = [
     location: "Aspen, CO",
     status: "completed",
     completionDate: "December 2022",
-    image: "https://images.unsplash.com/photo-1613553497126-a44624272634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: EmeraldValleyVillas,
     description: "Nestled in the picturesque landscapes of Aspen, Emerald Valley Villas offers luxury mountain living with 24 exclusive custom-built homes. Each residence features premium materials, expansive floor-to-ceiling windows, and seamless indoor-outdoor living spaces."
   },
   {
@@ -44,7 +49,7 @@ const projects: Project[] = [
     location: "Chicago, IL",
     status: "completed",
     completionDate: "April 2023",
-    image: "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    image: NexusBusinessCenter,
     description: "The Nexus Business Center represents the future of commercial spaces in downtown Chicago. This innovative hub features flexible office solutions, state-of-the-art conference facilities, and an integrated smart building management system."
   },
   {
@@ -66,7 +71,7 @@ const projects: Project[] = [
     location: "Seattle, WA",
     status: "ongoing",
     completionDate: "Expected Q2 2024",
-    image: "https://images.unsplash.com/photo-1600047509807-f8e8eca2a72b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80",
+    image: horizonplaza,
     description: "Currently under construction, Horizon Plaza will be a mixed-use development combining retail, office, and residential spaces in downtown Seattle. The project emphasizes sustainable design and will include public green spaces, electric vehicle charging stations, and energy-efficient systems throughout."
   },
   {

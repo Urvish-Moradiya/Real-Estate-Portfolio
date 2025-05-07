@@ -6,6 +6,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { useInView } from "@/hooks/use-in-view";
 import { ArrowRight, Building2, Check, Users, Layers, Phone, Mail } from "lucide-react";
+import interiorDesign from "../assets/interior design.jpg";
+import resident from "../assets/resident.webp";
+import NexusBusinessCenter from "./../assets/Nexus Business Center.jpeg";
 
 const About = () => {
   useEffect(() => {
@@ -55,7 +58,7 @@ const HeroSection = () => {
             Building Excellence <br />Since 2005
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-2xl">
-            We are SereneEstate, a premier construction company specializing in creating spaces that inspire, endure, and exceed expectations.
+            We are RealEstate, a premier construction company specializing in creating spaces that inspire, endure, and exceed expectations.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contact">
@@ -93,7 +96,7 @@ const CompanyOverview = () => {
             </h2>
             
             <p className="text-lg mb-6 text-estate-charcoal/80">
-              Since our founding in 2005, SereneEstate has established itself as a leader in the construction industry, delivering exceptional projects across the commercial and residential sectors.
+              Since our founding in 2005, RealeEstate has established itself as a leader in the construction industry, delivering exceptional projects across the commercial and residential sectors.
             </p>
             
             <p className="mb-8 text-estate-charcoal/80">
@@ -128,7 +131,7 @@ const CompanyOverview = () => {
           >
             <div className="space-y-4">
               <img 
-                src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src={NexusBusinessCenter} 
                 alt="Commercial project" 
                 className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
               />
@@ -140,7 +143,7 @@ const CompanyOverview = () => {
             </div>
             <div className="space-y-4 mt-8">
               <img 
-                src="https://images.unsplash.com/photo-1613553497126-a44624272634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src={interiorDesign}
                 alt="Interior design" 
                 className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
               />
@@ -319,7 +322,7 @@ const Expertise = () => {
           >
             <div className="relative h-72 overflow-hidden rounded-lg mb-6">
               <img 
-                src="https://images.unsplash.com/photo-1613553497126-a44624272634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                src={resident}
                 alt="Residential Construction" 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -474,7 +477,7 @@ const Leadership = () => {
       name: "Jonathan Reynolds",
       role: "Founder & CEO",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
-      description: "With over 30 years in construction, Jonathan founded SereneEstate with a vision to transform the industry through innovation and excellence."
+      description: "With over 30 years in construction, Jonathan founded RealeEstate with a vision to transform the industry through innovation and excellence."
     },
     {
       name: "Sarah Chen",
@@ -578,7 +581,7 @@ const QuickContact = () => {
                   <Mail className="text-estate mr-4 h-5 w-5 mt-1" />
                   <div>
                     <h4 className="font-semibold text-estate-charcoal">Email</h4>
-                    <p className="text-estate-charcoal/70">info@sereneestate.com</p>
+                    <p className="text-estate-charcoal/70">info@realestate.com</p>
                   </div>
                 </div>
               </div>

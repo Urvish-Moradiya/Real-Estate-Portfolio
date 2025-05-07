@@ -44,11 +44,9 @@ const Footer = () => {
           <div>
             <h3 className="font-playfair text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-sm text-gray-300 hover:text-estate transition-colors">Architecture</Link></li>
-              <li><Link to="/services" className="text-sm text-gray-300 hover:text-estate transition-colors">Interior Design</Link></li>
-              <li><Link to="/services" className="text-sm text-gray-300 hover:text-estate transition-colors">Project Management</Link></li>
-              <li><Link to="/services" className="text-sm text-gray-300 hover:text-estate transition-colors">Turnkey Solutions</Link></li>
-              <li><Link to="/services" className="text-sm text-gray-300 hover:text-estate transition-colors">Consultation</Link></li>
+              <li><Link to="/projects" className="text-sm text-gray-300 hover:text-estate transition-colors">Residential</Link></li>
+              <li><Link to="/projects" className="text-sm text-gray-300 hover:text-estate transition-colors">Interior Design</Link></li>
+              <li><Link to="/projects" className="text-sm text-gray-300 hover:text-estate transition-colors">Commercial</Link></li>
             </ul>
           </div>
           
@@ -57,8 +55,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-sm text-gray-300">123 Builder Avenue</li>
               <li className="text-sm text-gray-300">New York, NY 10001</li>
-              <li className="text-sm text-gray-300">info@sereneestate.com</li>
-              <li className="text-sm text-gray-300">+1 (555) 123-4567</li>
+              <li className="text-sm text-gray-300">info@realestate.com</li>
+              <li className="text-sm text-gray-300">+91 88888 88888</li>
             </ul>
           </div>
         </div>
