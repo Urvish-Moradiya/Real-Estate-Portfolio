@@ -54,6 +54,11 @@
     @apply border-border;
   }
 
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -123,5 +128,28 @@
   
   .glassmorphism {
     @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Mobile overflow fixes */
+  .mobile-safe {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .container-mobile-safe {
+    @apply container mx-auto px-4 mobile-safe;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  @media (max-width: 768px) {
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }

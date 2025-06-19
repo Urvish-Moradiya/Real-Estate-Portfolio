@@ -75,7 +75,7 @@ const Navbar = () => {
   const navbarClass = cn(
     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
     isScrolled 
-      ? "bg-white/95 shadow-lg backdrop-blur-md py-3 text-gray-900" 
+      ? "bg-white/95 shadow-lg backdrop-blur-md py-5 md:py-3  text-gray-900" 
       : "bg-transparent py-5 text-white"
   );
 
@@ -90,7 +90,7 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClass}>
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center w-full max-w-full">
         <Link to="/" className="flex items-center">
           <h1 className="text-2xl font-playfair font-bold transition-colors duration-300">
             <span className={isScrolled ? "text-estate" : "text-white"}>Real</span>Estate
@@ -112,8 +112,8 @@ const Navbar = () => {
             </button>
 
             {isMenuOpen && (
-              <div className="fixed inset-0 top-[72px] bg-white z-50 overflow-y-auto text-gray-900">
-                <div className="flex flex-col space-y-6 p-8">
+              <div className="fixed left-0 right-0 top-[72px] bg-white z-50 text-gray-900 shadow-lg border-t border-gray-100">
+                <div className="flex flex-col space-y-6 p-8 pb-6">
                   {navLinks.map((link, index) => (
                     <Link
                       key={link.name}

@@ -19,18 +19,19 @@ const Hero = () => {
   };
 
   return (
-    <div 
+    <div
       ref={heroRef}
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-center justify-center overflow-hidden w-full"
       style={{
         backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80')",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        maxWidth: "100vw",
       }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
       
-      <div className="container mx-auto px-4 relative z-10 text-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center w-full max-w-full">
         <h1 
           className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight text-balance overflow-hidden ${isVisible ? '' : 'opacity-0'}`}
         >
@@ -78,7 +79,7 @@ const Hero = () => {
           }}
         >
           <Link to="/projects">
-            <Button size="lg" className="hover:bg-estate-300 text-white btn-hover-slide">
+            <Button size="lg" className="w-full sm:w-auto hover:bg-estate-dark text-white btn-hover-slide">
               Explore Projects
             </Button>
           </Link>

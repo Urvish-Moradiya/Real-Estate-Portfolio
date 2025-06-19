@@ -78,7 +78,7 @@ const Projects = () => {
             <Button className="hover:bg-estate-300 text-white btn-hover-slide">
               View All Projects
             </Button>
-          </Link>
+          </Link> 
         </div>
       </div>
     </section>

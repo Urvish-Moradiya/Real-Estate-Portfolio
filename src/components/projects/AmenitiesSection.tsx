@@ -88,28 +88,28 @@ export const AmenitiesSection = () => {
           </TabsList>
           
           <TabsContent value="all" className="mt-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {filteredAmenities.map((amenity, index) => (
                 <AmenityCard key={index} amenity={amenity} />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="luxury" className="mt-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {filteredAmenities.map((amenity, index) => (
                 <AmenityCard key={index} amenity={amenity} />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="essentials" className="mt-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {filteredAmenities.map((amenity, index) => (
                 <AmenityCard key={index} amenity={amenity} />
               ))}
             </div>
           </TabsContent>
           <TabsContent value="green" className="mt-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
               {filteredAmenities.map((amenity, index) => (
                 <AmenityCard key={index} amenity={amenity} />
               ))}

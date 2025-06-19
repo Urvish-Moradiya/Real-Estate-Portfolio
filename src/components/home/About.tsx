@@ -73,7 +73,7 @@ const About = () => {
             </Link>
           </div>
           
-          <div className={`grid grid-cols-2 gap-8 transform transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: '0.4s' }}>
+          <div className={`grid grid-cols-2 gap-4 md:gap-12 transform transition-all duration-1000 ${isInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} style={{ transitionDelay: '0.4s' }}>
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold text-estate mb-2">
                 <AnimatedCounter end={20} className="animate-count-up" />+
