@@ -12,11 +12,7 @@ const partners = [
     role: "Interior Design Partner",
     logo: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=200&h=100&fit=crop&auto=format",
   },
-  {
-    name: "GreenBuild Constructions",
-    role: "Construction Partner",
-    logo: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=200&h=100&fit=crop&auto=format",
-  },
+
 ];
 
 export const DeveloperInfoSection = () => {
@@ -128,7 +124,7 @@ export const DeveloperInfoSection = () => {
               Meet our strategic partners who help bring our vision to life with their expertise and craftsmanship.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-estate-beige/20 rounded-lg p-6 transition-all duration-300 hover:shadow-md">
                   <div className="h-16 mb-4 flex items-center">
